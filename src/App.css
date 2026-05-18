@@ -1,0 +1,272 @@
+/*-- 1. Fonts & Imports --*/
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Roboto:wght@400;500;700&family=Tajawal:wght@300;400;500;700&display=swap");
+@font-face {
+  font-family: "The Year of Handicrafts";
+  src: url("./assets/TheYearOfHandicrafts-Regular.otf") format("opentype");
+  /* font-weight: 400; */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Handicrafts-Regular";
+  src: url("./assets/fTheYearOfHandicrafts-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*-- 2. Base Styles --*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background-color: #eff6ff;
+  font-family: "The Year of Handicrafts", "Amiri", serif;
+  color: #334155;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.app-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* border-right: solid lightgrey;
+  border-left: solid lightgrey; */
+}
+
+/* .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+} */
+
+/*-- 3. Hero Section --*/
+.hero {
+  padding: 150px 0 60px; /* تم تعديل الـ padding العلوي لمنع الاختفاء خلف الناف بار */
+  text-align: right;
+}
+
+.hero .title {
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(to left, #2563eb, #9333ea, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.hero .subtitle {
+  font-size: 40px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.hero .hero-description {
+  font-size: 18px;
+  color: #64748b;
+  max-width: 700px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/*-- 4. About Box (The Intro) --*/
+.section-alt {
+  background: rgba(136, 136, 136, 0.05);
+  padding: 60px 40px;
+  margin: 4rem 0;
+  border-radius: 24px;
+  scroll-margin-top: 100px;
+}
+
+.intro-quote {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-quote p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #334155;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.intro-quote::before {
+  content: "”";
+  position: absolute;
+  right: -50px;
+  top: -110px;
+  font-size: 150px;
+  color: rgba(0, 0, 0, 0.05);
+  font-family: serif;
+}
+
+.intro-quote::after {
+  content: "“";
+  position: absolute;
+  left: -60px;
+  bottom: -150px; /* تم تعديلها لتتناسب ديناميكياً مع طول النص البديل */
+  font-size: 150px;
+  color: rgba(0, 0, 0, 0.05);
+  font-family: serif;
+}
+
+/*-- 5. Services Grid --*/
+.services-title {
+  scroll-margin-top: 100px;
+  text-align: center;
+  font-size: 50px;
+  background: linear-gradient(to left, #2563eb, #4f46e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.service-card {
+  background: rgba(136, 136, 136, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease-out;
+}
+
+.service-card h3 {
+  font-size: 28px;
+  color: #2563eb;
+  margin: 15px 0;
+}
+
+.service-card p {
+  font-size: 18px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.service-card svg {
+  color: #4f46e5;
+  /* color: #64748b; */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/*-- 6. Buttons --*/
+.btn-primary {
+  background: linear-gradient(to left, #2563eb, #4f46e5);
+  color: #eff6ff;
+  padding: 12px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/*-- 7. Footer & Contact --*/
+.footer {
+  margin-top: auto; /* يدفع الفوتر للأسفل دائماً */
+  /* padding: 60px 0; */
+  text-align: right;
+}
+
+.footer-content {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 20px;
+}
+
+.footer h3 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  color: #2563eb;
+}
+
+.footer .contact-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  font-family:
+    "Roboto", sans-serif !important; /* Roboto في المقدمة للأرقام واللاتيني */
+  font-weight: 400 !important;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer .contact-row svg {
+  color: #94a2b8;
+}
+
+.footer .contact-row a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.footer .contact-row a:hover {
+  color: #2563eb;
+}
+
+.footer .copyright-text {
+  text-align: center;
+  margin-top: 50px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-family: "Amiri", serif;
+}
+
+/*-- 8. Media Queries (Responsive) --*/
+@media (max-width: 768px) {
+  .hero .title {
+    font-size: 50px;
+  }
+  .hero .subtitle {
+    font-size: 30px;
+  }
+  .services-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero {
+    text-align: center;
+  }
+  .hero .title {
+    font-size: 45px;
+  }
+  .section-alt .intro-quote::before {
+    right: -20px;
+    top: -60px;
+    font-size: 90px;
+  }
+  .section-alt .intro-quote::after {
+    left: -20px;
+    bottom: -60px;
+    font-size: 90px;
+  }
+}

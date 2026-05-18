@@ -1,0 +1,151 @@
+/* الحاوية الرئيسية للمدونة */
+.blog-container {
+  max-width: 1100px;
+  /* margin: 0 auto; */
+  padding: 0px 0px 80px; /* الـ padding العلوي يمنع الاختفاء تحت الناف بار الثابت */
+  /* direction: rtl; */
+}
+
+/* هيدر صفحة المدونة */
+.blog-header {
+  /* text-align: right; */
+  margin-bottom: 50px;
+  /* border-bottom: 2px solid rgba(37, 99, 235, 0.1); */
+  padding-bottom: 20px;
+}
+
+.blog-header h2 {
+  font-size: 42px;
+  /* 1. نضع التدرج اللوني كخلفية أولاً */
+  background: linear-gradient(to left, #2563eb, #9333ea, #4f46e5);
+
+  /* 2. نخبر المتصفح أن يقص الخلفية على حدود حروف النص فقط */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. نجعل لون النص الأصلي شفافاً تماماً لتظهر الخلفية المتدرجة من خلاله */
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  font-family: "The Year of Handicrafts", "Amiri", serif;
+}
+
+.blog-header p {
+  font-size: 18px;
+  color: #64748b;
+  font-family: "Tajawal", sans-serif;
+}
+
+/* شبكة كروت المدونة */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+/* كارت المقال الاستشاري */
+.blog-card {
+  background: rgba(136, 136, 136, 0.03);
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+/* البيانات الوصفية (التاريخ والقسم) */
+.blog-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Tajawal", sans-serif;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.blog-category {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.blog-date {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* محتوى الكارت */
+.blog-icon-wrapper {
+  color: #4f46e5;
+  margin-bottom: 15px;
+}
+
+.blog-card-content h3 {
+  font-size: 24px;
+  color: #334155;
+  margin-bottom: 12px;
+  font-family: "The Year of Handicrafts", "Amiri", serif;
+}
+
+.blog-card-content p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.7;
+  font-family: "Tajawal", sans-serif;
+  margin-bottom: 25px;
+}
+
+/* زر القراءة أسفل الكارت */
+.blog-card-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 15px;
+}
+
+.blog-read-more {
+  text-decoration: none;
+  color: #4f46e5;
+  font-family: "Tajawal", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s ease;
+}
+
+.blog-read-more svg {
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover .blog-read-more svg {
+  transform: translateX(
+    -5px
+  ); /* حركة الأيقونة جهة اليمين/اليسار عند الـ hover */
+}
+
+/* إلغاء التنسيقات الافتراضية للروابط على الكارد بالكامل */
+.blog-card-link {
+  text-decoration: none;
+  color: inherit; /* جعل النصوص ترث الألوان المحددة مسبقاً داخل الكارد */
+  display: block; /* لضمان أخذ الرابط للمساحة الكاملة للكارد */
+}
+
+/* حركة تفاعلية مريحة عند تمرير الماوس فوق الكارد بالكامل */
+.blog-card-link:hover .blog-card {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.2);
+}

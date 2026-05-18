@@ -1,0 +1,102 @@
+/* الحاوية الكبرى للصفحة */
+.report-page-container {
+  direction: rtl;
+  min-height: 100vh;
+  /* padding: 150px 20px 60px;  */
+  /* background-color: #f8fafc;  */
+  color: #334155;
+  font-family: "Tajawal", sans-serif;
+}
+
+/* الهيدر والعناوين */
+.report-header-section {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+}
+
+.report-main-title {
+  color: #2563eb;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: right;
+  margin-bottom: 25px;
+  font-family: "The Year of Handicrafts", "Amiri", serif;
+}
+
+.title-date {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  /* color: #4f46e5; */
+}
+
+.report-intro-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 25px;
+}
+
+.stats-link {
+  /* color: #2563eb; */
+  color: #475569;
+
+  text-decoration: none;
+  font-weight: 600;
+  /* border-bottom: 1px dashed #2563eb; */
+}
+
+/* كارت قراءة التحليلات الاستشارية */
+.analysis-card {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  margin-bottom: 40px;
+}
+
+.analysis-title {
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.analysis-list {
+  padding-right: 20px;
+  margin: 0;
+}
+
+.analysis-list li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.analysis-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* حاوية الشارت الرئيسية */
+.report-chart-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* فوتر المصادر السفلي */
+.report-footer-meta {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  /* border-top: 1px solid #e2e8f0; */
+}
+
+.sources-text {
+  text-align: right;
+  font-size: 13px;
+  color: #94a3b8;
+  font-family: "Tajawal", sans-serif;
+}

@@ -1,0 +1,53 @@
+/* كودك الحالي بعد الترتيب */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* تنسيق الروابط نفسها وإزالة الخطوط */
+.nav-links a {
+  text-decoration: none; /* إزالة الخط السفلي الافتراضي */
+  color: #333333; /* لون الخط الأساسي */
+  font-weight: 500;
+  transition: color 0.3s ease; /* حركة ناعمة عند تمرير الماوس */
+}
+
+/* تأثير عند تمرير الماوس (Hover) والروابط النشطة */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #007bff; /* لون هوية موقع رؤية (أزرق كمثال) */
+}
+
+/* 2. حاوية اللوجو (قمنا بزيادة الحجم هنا) */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* 3. الصورة داخل الحاوية (مفصولة ومكتوبة بشكل صحيح للمتصفح) */
+.logo-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+
+  .navbar-logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* يضمن عدم تمطط الصورة */
+  }
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
