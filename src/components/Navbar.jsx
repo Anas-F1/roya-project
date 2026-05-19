@@ -27,7 +27,6 @@ const Navbar = () => {
           </NavLink>
         </li>
 
-        {/* التعديل هنا: استخدام HashLink بدلاً من a href العادية */}
         <li>
           <HashLink smooth to="/#about">
             من نحن

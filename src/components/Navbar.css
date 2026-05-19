@@ -1,4 +1,11 @@
-/* كودك الحالي بعد الترتيب */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
 .nav-links {
   display: flex;
   flex-direction: row;
@@ -23,13 +30,11 @@
   color: #007bff; /* لون هوية موقع رؤية (أزرق كمثال) */
 }
 
-/* 2. حاوية اللوجو (قمنا بزيادة الحجم هنا) */
-.logo-container {
+/* .logo-container {
   display: flex;
   align-items: center;
-}
+} */
 
-/* 3. الصورة داخل الحاوية (مفصولة ومكتوبة بشكل صحيح للمتصفح) */
 .logo-container {
   width: 50px;
   height: 50px;
@@ -43,11 +48,4 @@
     height: auto;
     object-fit: contain; /* يضمن عدم تمطط الصورة */
   }
-}
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
 }
