@@ -5,8 +5,37 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>رؤية للاستشـارات</title>
-    <script type="module" crossorigin src="/assets/index-Cbi4CpNH.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Cwdo1fT1.css">
+    <script type="text/javascript">
+      // هذا الكود يقرأ التوجيه القادم من صفحة 404 ويعيد بناء الرابط داخل React Router
+      (function (l) {
+        if (l.search[1] === "p") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .reduce(function (search, keyVal) {
+              var key = keyVal.split("=")[0];
+              var val = keyVal.split("=")[1];
+              search[key] = val;
+              return search;
+            }, {});
+          if (decoded.p !== undefined) {
+            window.history.replaceState(
+              null,
+              null,
+              l.pathname.slice(0, -1) +
+                (decoded.p ? "/" + decoded.p : "") +
+                (decoded.q ? "?" + decoded.q : "") +
+                l.hash,
+            );
+          }
+        }
+      })(window.location);
+    </script>
+    <script type="module" crossorigin src="/assets/index-c6roMvIk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C6mCP0EY.css">
   </head>
   <body>
     <div id="root"></div>
