@@ -7,6 +7,7 @@ import BlogList from "./components/BlogList";
 import EconomicReport from "./components/EconomicReport";
 import Footer from "./components/Footer";
 import "./App.css";
+import CirclePackingChart from "./components/CirclePackingChart";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
           <Route path="/" element={<HomeContent />} />
           <Route path="/blog" element={<BlogList />} />
           <Route path="/blog/economic-report" element={<EconomicReport />} />
+          <Route
+            path="/blog/saudi-labor-market"
+            element={<CirclePackingChart />}
+          />
           <Route path="*" element={<HomeContent />} />
         </Routes>
         <Footer />

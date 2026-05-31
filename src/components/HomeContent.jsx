@@ -3,7 +3,7 @@ import { BarChart3, Presentation, SearchCode } from "lucide-react";
 const HomeContent = () => {
   return (
     <div className="container">
-      {/* 2. Hero Section */}
+      {/* Hero Section */}
       <header className="hero" id="home">
         <h1 className="title">رؤية للاستشـارات</h1>
         <p className="subtitle">نُحوِّل بياناتك إلى قرارات</p>
@@ -16,7 +16,7 @@ const HomeContent = () => {
         </a>
       </header>
 
-      {/* 3. About Section */}
+      {/* About Section */}
       <section id="about" className="section-alt">
         <div className="intro-quote">
           <p>
@@ -40,7 +40,7 @@ const HomeContent = () => {
         </div>
       </section>
 
-      {/* 4. Services Section */}
+      {/* Services Section */}
       <section>
         <h2 id="services" className="services-title">
           خدماتنـا

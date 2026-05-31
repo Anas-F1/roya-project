@@ -1,6 +1,6 @@
 import React from "react";
 import DivergingChart from "../components/DivergingChart";
-import "./ReportStyle.css"; // استدعاء ملف التنسيق الجديد الفخم
+import "./ReportStyle.css";
 
 const EconomicReport = () => {
   return (
